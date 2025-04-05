@@ -1,0 +1,21 @@
+[
+	{
+		"name": "seema",
+		"gender": "female",
+		"status": "inactive"
+	},
+	
+	{
+		"name": "akh",
+		"gender": "male",
+		"status": "inactive"
+	},
+	
+	{
+		"name": "seem2",
+		"gender": "female",
+		"status": "inactive"
+	}
+
+
+]
