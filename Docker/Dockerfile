@@ -16,8 +16,8 @@ RUN npm install -g newman-reporter-htmlextra
 
 
 # Copy your Postman collection and environment files to the working directory
-COPY DataDrivenAPIs.json .
-COPY GoRestEnv.json .
+COPY DataDriven/DataDrivenAPIs.json .
+COPY DataDriven/GoRestEnv.json .
 COPY dataDrivenFile.csv .
 
 # Set the command to run Newman and execute your Postman collection
