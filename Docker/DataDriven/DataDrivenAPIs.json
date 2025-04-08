@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "47c6c05e-b3b4-4af0-8643-c498b12b26ff",
-		"name": "DataDrivenAPIs as",
+		"name": "DataDrivenAPIs with gorest env",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28623978"
 	},
@@ -32,6 +32,14 @@
 							"    pm.expect(jsonData.email).to.eql(email);",
 							"",
 							"});",
+							"",
+							"pm.test(\"Test the response header with its value\", function() {",
+							"    pm.expect(pm.response.headers.get(\"Connection\")).to.eql(\"keep-alive\");",
+							"})",
+							"",
+							"pm.test(\"Test the response header\", function() {",
+							"    pm.expect(pm.response).to.have.header(\"Content-Type\");",
+							"})",
 							"",
 							"const response = pm.response.json();",
 							"const userID = response.id;",
