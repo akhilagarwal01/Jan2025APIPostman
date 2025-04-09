@@ -18,9 +18,8 @@ RUN npm install -g newman-reporter-htmlextra
 RUN mkdir -p /app/results
 
 # Copy your Postman collection and environment files to the working directory
-COPY DataDriven/DataDrivenAPIs.json .
-COPY DataDriven/GoRestEnv.json .
-COPY dataDrivenFile.csv .
+COPY Contact_Api_collection/ContactsAPI.json .
+COPY Contact_Api_collection/ContactsEnv.json .
 
 # Set the command to run Newman and execute your Postman collection
-CMD ["newman", "run", "DataDrivenAPIs.json", "-e", "GoRestEnv.json", "-d", "dataDrivenFile.csv", "-r", "cli,json,html,htmlextra", "--reporter-htmlextra-export", "./results/htmlextra.html"]
+CMD ["newman", "run", "ContactsAPI.json", "-e", "ContactsEnv.json", "-r", "cli,json,html,htmlextra", "--reporter-htmlextra-export", "/app/results/ContactsApiResult.html"]

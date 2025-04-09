@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  gorest:
+    image: akhilagarwal012/bookingapitest:1.0
+    volumes:
+      - ./results:/app/results
+
+  booking:
+    image: akhilagarwal012/datadriventest:1.0
+    volumes:
+      - ./results:/app/results
+      
+  contact:
+    image: akhilagarwal012/contactapitest:1.0
+    volumes:
+      - ./results:/app/results
